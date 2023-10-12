@@ -29,8 +29,10 @@ const chooseOperation = (operator) => {
 
 const compute = () => {
     let computation;
+    console.log(firstOperand, secondOperand, currentOperator)
     const prev = parseFloat(firstOperand);
     const current = parseFloat(secondOperand);
+    console.log(firstOperand, secondOperand, currentOperator)
     if (isNaN(prev) || isNaN(current)) return;
     switch (currentOperator) {
         case '+':
@@ -48,10 +50,9 @@ const compute = () => {
         default:
             return;
     }
+    firstOperand = secondOperand
     secondOperand = computation;
-    currentOperator = undefined;
-    firstOperand = '';
-    resetScreen = true;
+    
 };
 
 const clear = () => {
@@ -63,6 +64,7 @@ const clear = () => {
 document.querySelector('#buttons').addEventListener('click', (button) => {
     if (button.target.matches('button')) {
         const action = button.target.value;
+        console.log(action)
         switch (action) {
             case '+':
             case '-':
