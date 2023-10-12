@@ -68,9 +68,6 @@ textarea {
     resize: vertical;
 }
 
-   Author's custom styles
-   ========================================================================== */
-=======
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -90,15 +87,14 @@ textarea {
 .btn {
     background-color: #61dafb;
     color: #282c34;
+    font-size: 20px;
+    padding: 10px 20px;
 }
 
 .operator {
     background-color: #282c34;
     color: #61dafb;
 }
-=======
-   Browser Upgrade Prompt
-   ========================================================================== */
 
 .browserupgrade {
     margin: 0.2em 0;
