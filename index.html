@@ -16,7 +16,40 @@
     </head>
     <body>
         
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id="calculator" class="modern-style">
+            <input type="text" id="display" class="display-modern" disabled>
+            <div id="buttons" class="buttons-modern">
+                <div class="row">
+                    <button class="btn modern-btn" id="clear">AC</button>
+                    <button class="btn modern-btn" id="plus-minus">+/-</button>
+                    <button class="btn operator modern-operator" value="%">%</button>
+                    <button class="btn operator modern-operator" value="/">/</button>
+                </div>
+                <div class="row">
+                    <button class="btn modern-btn" value="7">7</button>
+                    <button class="btn modern-btn" value="8">8</button>
+                    <button class="btn modern-btn" value="9">9</button>
+                    <button class="btn operator modern-operator" value="*">X</button>
+                </div>
+                <div class="row">
+                    <button class="btn modern-btn" value="4">4</button>
+                    <button class="btn modern-btn" value="5">5</button>
+                    <button class="btn modern-btn" value="6">6</button>
+                    <button class="btn operator modern-operator" value="-">-</button>
+                </div>
+                <div class="row">
+                    <button class="btn modern-btn" value="1">1</button>
+                    <button class="btn modern-btn" value="2">2</button>
+                    <button class="btn modern-btn" value="3">3</button>
+                    <button class="btn operator modern-operator" value="+">+</button>
+                </div>
+                <div class="row">
+                    <button class="btn modern-btn" value="0">0</button>
+                    <button class="btn modern-btn" id="comma">,</button>
+                    <button class="btn operator modern-operator" value="=">=</button>
+                </div>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
