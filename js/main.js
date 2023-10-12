@@ -36,6 +36,7 @@ function setOperator(operator) {
     if (currentOperator !== '') calculate();
     if (operator === '=') {
         currentOperator = operator;
+        secondOperand = display.value;
     } else {
         firstOperand = display.value;
         currentOperator = operator;
@@ -52,7 +53,10 @@ function calculate() {
     }
     if (currentOperator === '=') {
         firstOperand = display.value;
+        console.log(currentOperator, firstOperand, secondOperand);
         display.value = operate(currentOperator, firstOperand, secondOperand);
+        firstOperand = display.value;
+        secondOperand = display.value;
     } else {
         secondOperand = display.value;
         display.value = operate(currentOperator, firstOperand, secondOperand);
