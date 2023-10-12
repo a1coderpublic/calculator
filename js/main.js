@@ -34,8 +34,12 @@ function resetScreen() {
 
 function setOperator(operator) {
     if (currentOperator !== '') calculate();
-    firstOperand = display.value;
-    currentOperator = operator;
+    if (operator === '=') {
+        currentOperator = operator;
+    } else {
+        firstOperand = display.value;
+        currentOperator = operator;
+    }
     shouldResetScreen = true;
 }
 
@@ -46,12 +50,15 @@ function calculate() {
         resetCalculator();
         return;
     }
-    secondOperand = display.value;
-    display.value = operate(currentOperator, firstOperand, secondOperand);
-    firstOperand = display.value;
-    if (currentOperator !== '=') {
-        shouldResetScreen = true;
+    if (currentOperator === '=') {
+        firstOperand = display.value;
+        display.value = operate(currentOperator, firstOperand, secondOperand);
+    } else {
+        secondOperand = display.value;
+        display.value = operate(currentOperator, firstOperand, secondOperand);
+        firstOperand = display.value;
     }
+    shouldResetScreen = true;
 }
 
 function resetCalculator() {
