@@ -4,7 +4,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-    background-color: #f5f5f5;
+    background-color: #F9E4B7; /* Light Orange */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,11 +73,21 @@ textarea {
    ========================================================================== */
 
 #calculator {
-    background-color: #282c34;
-    color: #61dafb;
+    background-color: #F9E4B7; /* Light Orange */
+    color: #E26D5C; /* Red */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    box-sizing: border-box;
 }
 
 #buttons {
@@ -85,21 +95,26 @@ textarea {
 }
 
 .btn {
-    background-color: #61dafb;
+    background-color: #E26D5C; /* Red */
     color: #282c34;
     font-size: 20px;
-    padding: 10px 20px;
-    width: 20%;
+    padding: 0;
+    width: 24%;
+    padding: 10px 0;
     box-sizing: border-box;
+    border: 1px solid #282c34;
 }
 
 .double-width {
     width: 40%;
 }
+#zero {
+    width: 49%;
+}
 
 .operator {
     background-color: #282c34;
-    color: #61dafb;
+    color: #F9E4B7; /* Light Orange */
 }
 
 .browserupgrade {
