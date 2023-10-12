@@ -48,7 +48,10 @@ function calculate() {
     }
     secondOperand = display.value;
     display.value = operate(currentOperator, firstOperand, secondOperand);
-    currentOperator = '';
+    firstOperand = display.value;
+    if (currentOperator !== '=') {
+        shouldResetScreen = true;
+    }
 }
 
 function resetCalculator() {
