@@ -32,11 +32,20 @@ function resetScreen() {
     shouldResetScreen = false;
 }
 
+let previousOperator = '';
+let previousOperand = '';
+
 function setOperator(operator) {
     if (currentOperator !== '') calculate();
     if (operator === '=') {
-        currentOperator = operator;
-        secondOperand = display.value;
+        if (previousOperator !== '') {
+            currentOperator = previousOperator;
+            firstOperand = display.value;
+            secondOperand = previousOperand;
+        } else {
+            currentOperator = operator;
+            secondOperand = display.value;
+        }
     } else {
         firstOperand = display.value;
         currentOperator = operator;
@@ -57,10 +66,14 @@ function calculate() {
         display.value = operate(currentOperator, firstOperand, secondOperand);
         firstOperand = display.value;
         secondOperand = display.value;
+        previousOperator = currentOperator;
+        previousOperand = secondOperand;
     } else {
         secondOperand = display.value;
         display.value = operate(currentOperator, firstOperand, secondOperand);
         firstOperand = display.value;
+        previousOperator = currentOperator;
+        previousOperand = secondOperand;
     }
     shouldResetScreen = true;
 }
