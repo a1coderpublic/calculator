@@ -5,6 +5,10 @@ html {
     font-size: 1em;
     line-height: 1.4;
     background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -64,7 +68,35 @@ textarea {
     resize: vertical;
 }
 
+   Author's custom styles
+   ========================================================================== */
+=======
 /* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#calculator {
+    background-color: #282c34;
+    color: #61dafb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#buttons {
+    background-color: #282c34;
+}
+
+.btn {
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+.operator {
+    background-color: #282c34;
+    color: #61dafb;
+}
+=======
    Browser Upgrade Prompt
    ========================================================================== */
 
